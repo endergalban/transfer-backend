@@ -1,4 +1,4 @@
-## Description
+## Descripción
 
 Bakend para revisión de código.
 
@@ -20,7 +20,7 @@ Esta api se encuentra alojada en el servicios "Cloud Run" en Google Cloud Platfo
 
 - Clonar el archivo .env.example y crear un nuevo archivo con el nombre .env
 
-  En archivo .env setear:
+  Ajustar variables em archivo .env:
 
   DB_HOST :
   Host de la base de datos, por ejemplo:
