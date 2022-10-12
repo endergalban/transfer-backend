@@ -3,7 +3,9 @@
 Bakend para revisión de código.
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+
 [Swagger](https://transfer-backend-c6etffdimq-uc.a.run.app/api) Definición básica de endpoints
+
 [Sequelize](https://sequelize.org/) ORM para consultas a base de datos.
 
 Esta api se encuentra alojada en el servicios "Cloud Run" en Google Cloud Platform, por lo que esta contenerizada y preparada para escalamiento.
