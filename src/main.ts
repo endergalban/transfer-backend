@@ -4,6 +4,8 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
 import { useContainer } from 'class-validator';
+import { TransferModule } from './transfer/transfer.module';
+import { ReceiverModule } from './receiver/receiver.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -17,7 +19,10 @@ async function bootstrap() {
     .setDescription('The Transfer API description')
     .setVersion('1.0')
     .build();
-  const document = SwaggerModule.createDocument(app, config);
+  const document = SwaggerModule.createDocument(app, config, {
+    include: [ReceiverModule, TransferModule],
+  });
+
   SwaggerModule.setup('api', app, document);
 
   await app.listen(3000);

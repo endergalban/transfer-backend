@@ -17,10 +17,4 @@ export class ReceiverController {
   findAll() {
     return this.receiverService.findAll();
   }
-
-  @Delete(':id')
-  @ApiParam({ name: 'id' })
-  remove(@Param('id') id: string) {
-    return this.receiverService.remove(+id);
-  }
 }
