@@ -1,7 +1,7 @@
-import { Controller, Get, Post, Body, Delete, Param } from '@nestjs/common';
+import { Controller, Get, Post, Body } from '@nestjs/common';
 import { ReceiverService } from './receiver.service';
 import { CreateReceiverDto } from './dto/create-receiver.dto';
-import { ApiParam, ApiTags } from '@nestjs/swagger';
+import { ApiTags } from '@nestjs/swagger';
 
 @ApiTags('Receivers')
 @Controller('receiver')
