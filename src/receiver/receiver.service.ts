@@ -12,7 +12,10 @@ export class ReceiverService {
   create(createReceiverDto: CreateReceiverDto) {
     return this.receiversRepository.create<Receiver>({
       name: createReceiverDto.name,
-      identification: createReceiverDto.identification,
+      identification: createReceiverDto.identification
+        .toUpperCase()
+        .replace(/\./g, '')
+        .replace('-', ''),
       email: createReceiverDto.email,
       phone: createReceiverDto.phone,
       bank: createReceiverDto.bank,
